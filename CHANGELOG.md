@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.5.0-beta01] - May 4, 2026
+
+- Remove `iosX64` and `macosX64` targets. ([#3386](https://github.com/coil-kt/coil/pull/3386))
+- Increase Android's minimum SDK version to 23. ([#3283](https://github.com/coil-kt/coil/pull/3283))
+- Add fast WebP size extraction on JS/WASM to avoid falling back to a full Skia decode. ([#3341](https://github.com/coil-kt/coil/pull/3341))
+- Fix `CacheStrategy` implementations being unable to refresh cached failure responses (e.g. expired cached `404` responses). ([#3401](https://github.com/coil-kt/coil/pull/3401))
+- Update compile SDK to 36.
+- Update Kotlin to 2.3.21.
+- Update Compose to 1.11.0-beta03.
+- Update Okio to 3.17.0.
+- Update Skiko to 0.144.5.
+- Update `androidx.annotation` to 1.10.0.
+
 ## [3.4.0] - February 24, 2026
 
 - **New**: Add `ConcurrentRequestStrategy` to support combining in-flight network requests for the same key. ([#2995](https://github.com/coil-kt/coil/pull/2995), [#3326](https://github.com/coil-kt/coil/pull/3326))

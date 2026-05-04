@@ -58,6 +58,7 @@ SPLcoil3/EventListener;->keyEnd(Lcoil3/request/ImageRequest;Ljava/lang/String;)V
 SPLcoil3/EventListener;->keyStart(Lcoil3/request/ImageRequest;Ljava/lang/Object;)V
 SPLcoil3/EventListener;->mapEnd(Lcoil3/request/ImageRequest;Ljava/lang/Object;)V
 SPLcoil3/EventListener;->mapStart(Lcoil3/request/ImageRequest;Ljava/lang/Object;)V
+SPLcoil3/EventListener;->onCancel(Lcoil3/request/ImageRequest;)V
 SPLcoil3/EventListener;->onStart(Lcoil3/request/ImageRequest;)V
 SPLcoil3/EventListener;->onSuccess(Lcoil3/request/ImageRequest;Lcoil3/request/SuccessResult;)V
 SPLcoil3/EventListener;->resolveSizeEnd(Lcoil3/request/ImageRequest;Lcoil3/size/Size;)V
@@ -105,7 +106,7 @@ Lcoil3/Extras$Key$Companion;
 SPLcoil3/Extras$Key$Companion;-><init>()V
 SPLcoil3/Extras$Key$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 Lcoil3/ExtrasKt;
-SPLcoil3/ExtrasKt;->getExtra(Lcoil3/request/ImageRequest;Lcoil3/Extras$Key;)Ljava/lang/Object;
+HSPLcoil3/ExtrasKt;->getExtra(Lcoil3/request/ImageRequest;Lcoil3/Extras$Key;)Ljava/lang/Object;
 SPLcoil3/ExtrasKt;->getExtra(Lcoil3/request/Options;Lcoil3/Extras$Key;)Ljava/lang/Object;
 SPLcoil3/ExtrasKt;->getOrDefault(Lcoil3/Extras;Lcoil3/Extras$Key;)Ljava/lang/Object;
 Lcoil3/Image;
@@ -141,6 +142,7 @@ SPLcoil3/RealImageLoader;->getDefaults()Lcoil3/request/ImageRequest$Defaults;
 SPLcoil3/RealImageLoader;->getDiskCache()Lcoil3/disk/DiskCache;
 SPLcoil3/RealImageLoader;->getMemoryCache()Lcoil3/memory/MemoryCache;
 SPLcoil3/RealImageLoader;->getOptions()Lcoil3/RealImageLoader$Options;
+SPLcoil3/RealImageLoader;->onCancel(Lcoil3/request/ImageRequest;Lcoil3/EventListener;)V
 SPLcoil3/RealImageLoader;->onSuccess(Lcoil3/request/SuccessResult;Lcoil3/target/Target;Lcoil3/EventListener;)V
 Lcoil3/RealImageLoader$Options;
 SPLcoil3/RealImageLoader$Options;-><init>(Landroid/content/Context;Lcoil3/request/ImageRequest$Defaults;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lcoil3/EventListener$Factory;Lcoil3/ComponentRegistry;Lcoil3/util/Logger;)V
@@ -404,7 +406,7 @@ SPLcoil3/intercept/EngineInterceptor;->access$getSystemCallbacks$p(Lcoil3/interc
 SPLcoil3/intercept/EngineInterceptor;->decode(Lcoil3/fetch/SourceFetchResult;Lcoil3/ComponentRegistry;Lcoil3/request/ImageRequest;Ljava/lang/Object;Lcoil3/request/Options;Lcoil3/EventListener;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 HSPLcoil3/intercept/EngineInterceptor;->execute(Lcoil3/request/ImageRequest;Ljava/lang/Object;Lcoil3/request/Options;Lcoil3/EventListener;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 SPLcoil3/intercept/EngineInterceptor;->fetch(Lcoil3/ComponentRegistry;Lcoil3/request/ImageRequest;Ljava/lang/Object;Lcoil3/request/Options;Lcoil3/EventListener;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-SPLcoil3/intercept/EngineInterceptor;->intercept(Lcoil3/intercept/Interceptor$Chain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+HSPLcoil3/intercept/EngineInterceptor;->intercept(Lcoil3/intercept/Interceptor$Chain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 Lcoil3/intercept/EngineInterceptor$Companion;
 SPLcoil3/intercept/EngineInterceptor$Companion;-><init>()V
 SPLcoil3/intercept/EngineInterceptor$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
@@ -444,14 +446,14 @@ Lcoil3/intercept/Interceptor;
 Lcoil3/intercept/Interceptor$Chain;
 Lcoil3/intercept/RealInterceptorChain;
 SPLcoil3/intercept/RealInterceptorChain;-><init>(Lcoil3/request/ImageRequest;Ljava/util/List;ILcoil3/request/ImageRequest;Lcoil3/size/Size;Lcoil3/EventListener;Z)V
-SPLcoil3/intercept/RealInterceptorChain;->checkRequest(Lcoil3/request/ImageRequest;Lcoil3/intercept/Interceptor;)V
+HSPLcoil3/intercept/RealInterceptorChain;->checkRequest(Lcoil3/request/ImageRequest;Lcoil3/intercept/Interceptor;)V
 SPLcoil3/intercept/RealInterceptorChain;->copy$default(Lcoil3/intercept/RealInterceptorChain;ILcoil3/request/ImageRequest;Lcoil3/size/Size;ILjava/lang/Object;)Lcoil3/intercept/RealInterceptorChain;
 SPLcoil3/intercept/RealInterceptorChain;->copy(ILcoil3/request/ImageRequest;Lcoil3/size/Size;)Lcoil3/intercept/RealInterceptorChain;
 SPLcoil3/intercept/RealInterceptorChain;->getEventListener()Lcoil3/EventListener;
 SPLcoil3/intercept/RealInterceptorChain;->getRequest()Lcoil3/request/ImageRequest;
 SPLcoil3/intercept/RealInterceptorChain;->getSize()Lcoil3/size/Size;
 SPLcoil3/intercept/RealInterceptorChain;->isPlaceholderCached()Z
-SPLcoil3/intercept/RealInterceptorChain;->proceed(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+HSPLcoil3/intercept/RealInterceptorChain;->proceed(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 Lcoil3/intercept/RealInterceptorChain$proceed$1;
 SPLcoil3/intercept/RealInterceptorChain$proceed$1;-><init>(Lcoil3/intercept/RealInterceptorChain;Lkotlin/coroutines/Continuation;)V
 SPLcoil3/intercept/RealInterceptorChain$proceed$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
@@ -711,14 +713,12 @@ Lcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m$1()Landroid/graphics/Bitmap$Config;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m$1(Landroid/graphics/ImageDecoder;I)V
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m()Landroid/graphics/Bitmap$Config;
-SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m()Ljava/lang/Class;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder$ImageInfo;)Landroid/util/Size;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder$Source;Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;)Landroid/graphics/Bitmap;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder;I)V
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder;II)V
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder;Landroid/graphics/ImageDecoder$OnPartialImageListener;)V
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/ImageDecoder;Z)V
-SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Ljava/io/File;)Landroid/graphics/ImageDecoder$Source;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Ljava/lang/Object;)Landroid/graphics/ColorSpace;
 SPLcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m(Ljava/lang/Object;)Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;
